@@ -1,0 +1,26 @@
+{% include 'partials/header.html' %}
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+    <form action="{% url 'add' %}" method="post">
+        <!-- prevent cross site forgeries -->
+        {% csrf_token %}
+        <div class="ms-TextField">
+            <label class="ms-Label" for="title">Name</label>
+            <input class="ms-TextField-field" type="text" value="" placeholder="title here..." name="title" id="title">
+        </div>
+        <br>
+        <div class="ms-TextField">
+            <label class="ms-Label" for="text">Name</label>
+            <textarea class="ms-TextField-field" placeholder="description here..." name="text" id="text"></textarea>
+        </div>
+        <br/><br/>
+        <button type="submit" class="ms-Button ms-Button--primary">
+         <span class="ms-Button-label">SUBMIT</span> 
+        </button>
+    </form>
+
+{% include 'partials/footer.html' %}

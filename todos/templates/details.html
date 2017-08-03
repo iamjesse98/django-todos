@@ -1,0 +1,6 @@
+{% include 'partials/header.html' %}
+    <a class="ms-font-l" href="/todos"><i class="ms-Icon ms-Icon--Back" aria-hidden="true"></i> Back to todos list</a>
+        <h1 class="ms-font-xxl ms-fontColor-themePrimary">{{ todo.title }}</h1>
+        <p class="ms-font-xl">{{ todo.text }}</p>
+        <p class="ms-font-s">created on {{ todo.created_at }}</p>
+{% include 'partials/footer.html' %}
